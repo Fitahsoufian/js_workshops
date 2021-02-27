@@ -8,6 +8,8 @@ Nous allons travaillé sur trois branches "p1","p2","p3" un branche par projet ,
 ## Projet 2 : Flex panels 
 ## Projet 3 : To do list
 
+Chaque projet est dans un dossier séparé des autres avec son fichier html et js. 
+
 
 
 `# Workshops in javascript, team-work.`
@@ -17,6 +19,8 @@ Nous allons travaillé sur trois branches "p1","p2","p3" un branche par projet ,
 ## Project 1: Analogue and digital clock
 ## Project 2: Flex panels
 ## Project 3: To do list
+
+Each project has its own folder with a dedicated html and js files. 
  
  
 
