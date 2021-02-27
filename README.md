@@ -4,9 +4,9 @@ Workshop sur le JavaScipt , travail en groupe.
 
 Nous allons travaillé sur trois branches "p1","p2","p3" un branche par projet , puis lorsque les app sont stable on va les mettre sur la branche "main". 
 
-# Projet 1 : Horologe analogue et numérique 
-# Projet 2 : Flex panels 
-# Projet 3 : To do list
+## Projet 1 : Horologe analogue et numérique 
+## Projet 2 : Flex panels 
+## Projet 3 : To do list
 
 
 
