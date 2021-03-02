@@ -30,26 +30,34 @@ WHEN USER HOVER OVER SECTION
 // let panels = document.getElementsByClassName('panel');
 // panels = Array.from(panel);
 
+// select all panels as HTML COLLECTION
 const panels = document.querySelectorAll('.panel');
 /* .f=>upText .l=>downText .open=>makeWider 
  */
+//console.log(panels);
+
+// trigger class .open
 function makeWider() {
     this.classList.toggle('open');
 }
 
+//trigger class .f
 function upText() {
     this.classList.toggle('f');
 }
 
+//trigger class .l
 function downText() {
     this.classList.toggle('l');
 }
 
+// remove all triggered classes 
 function backNormal() {
     this.classList.remove('open');
     this.classList.remove('l');
     this.classList.remove('f');
 }
+// add specified classes for each panel
 panels.forEach(
     function(panel) {
         panel.addEventListener('click', makeWider);
