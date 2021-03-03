@@ -23,6 +23,7 @@ WHEN USER SEARCH
 */
 const form = document.querySelector(".add");
 let list = document.querySelector(".todos");
+const search = document.querySelector(".search > .form-control");
 
 function addTodo(toDo) {
     const item = `
@@ -51,11 +52,11 @@ form.addEventListener("submit", (e) => {
 
 // Delete todo
 list.addEventListener('click', (e) => {
-    if (e.target.classList.contains('delete')) {
-        e.target.parentElement.remove()
-    }
-})
-//filter and search
+        if (e.target.classList.contains('delete')) {
+            e.target.parentElement.remove()
+        }
+    })
+    //filter and search
 
 addEventListener('keyup', filterTodo);
 
