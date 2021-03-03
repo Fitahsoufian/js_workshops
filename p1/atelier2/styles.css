@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+  font-family: Gotham Rounded, sans-serif;
+}
+
+body{
+  background-image: linear-gradient(to right, rgb(82, 4, 49) , rgba(126, 124, 236, 0.918));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* intel here horloge position in the centre of horizotal axes, to make it in the centre of vertical axes use min-height: */
+  min-height: 100vh; /* intel here the window scrolling, move that by overflow: hidden */
+  overflow: hidden;
+}
+
+.clock{
+  width: 300px;
+  height: 300px;
+  background-color: rgba(255, 255, 255, .6);
+  border-radius: 50%;
+  border: 2px solid rgb(30, 6, 68);
+  position: relative;
+}
+
+.clock .number{
+  
+  --rotation : 0;  /* default */
+  position: absolute; /* must be position : relative in clock(parent) */
+  /* width and height control the position of number elements */
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform: rotate(var(--rotation));
+  font-size: 30px;
+}
+
+
+
+.clock .number1{--rotation: 0deg;
+  top: 24px;
+  left: 62px;}
+.clock .number2{--rotation: 0deg;
+  top: 66px;
+  left: 110px;}
+.clock .number3{--rotation: 0deg;
+  top: 132px;
+  left: 130px;}
+.clock .number4{--rotation: 0deg;
+  top: 200px;
+  left: 110px;}
+.clock .number5{--rotation: 0deg;
+  top: 243px;
+  left: 62px;}
+.clock .number6{--rotation: 0deg;
+top: 260px;}
+.clock .number7{--rotation: 0deg;
+  top: 243px;
+  right: 62px;}
+.clock .number8{--rotation: 0deg;
+  top: 200px;
+  right: 110px;}
+.clock .number9{--rotation: 0deg;
+top: 132px;
+right: 130px;}
+.clock .number10{--rotation: 0deg;
+  top: 66px;
+  right: 110px;}
+.clock .number11{--rotation: 0deg;
+  top: 24px;
+  right: 62px;}
+
+
+.clock .hand {
+  --rotation : 0;
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  border: 1px solid white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  z-index: 1; 
+  transform-origin: bottom; /* letting you change the point of origin of a transform.*/
+  /* from above intel here the line not in exact position so I'm going to add this function transform: translate(); */
+  transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg)); 
+  
+}
+
+.clock::after{ 
+  content: ""; 
+  position: absolute;
+  background-color: black;
+  z-index: 2;
+  width: 15px;
+  height: 15px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  border-radius: 50%;
+
+
+}
+
+.clock .hand.second{
+  width: 1%;
+  height: 45%;
+  background-color: red;
+
+}
+.clock .hand.minute{
+  width: 2%;
+  height: 38%;
+  background-color: black;
+
+}
+.clock .hand.hour{
+  width: 2%;
+  height: 30%;
+  background-color: black;
+
+}
+
