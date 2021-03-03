@@ -21,14 +21,10 @@ WHEN USER SEARCH
     
 
 */
-
-
-
-
 const form = document.querySelector(".add");
 let list = document.querySelector(".todos");
 
-function generateTemplate(toDo) {
+function addTodo(toDo) {
     const item = `
     <li class="list-group-item d-flex justify-content-between align-items-center">
         <span>${toDo}</span>
@@ -43,22 +39,22 @@ function generateTemplate(toDo) {
 form.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const todo = form.add.value.trim();
-    if (todo.length) {
-        generateTemplate(todo)
+    const todo = form.add.value;
+    if (todo.length > 0) {
+        addTodo(todo)
         form.reset()
+    } else {
+        alert("pls enter a valid");
     }
 
 });
 
 // Delete todo
-list.addEventListener('click', e => {
+list.addEventListener('click', (e) => {
     if (e.target.classList.contains('delete')) {
         e.target.parentElement.remove()
     }
 })
-
-
 //filter and search
 
 addEventListener('keyup', filterTodo);
