@@ -57,3 +57,31 @@ list.addEventListener('click', e => {
         e.target.parentElement.remove()
     }
 })
+
+
+//filter and search
+
+addEventListener('keyup', filterTodo);
+
+function filterTodo() {
+    // Declare variables
+    let filter, ul, li, i, txtValue;
+    filter = search.value.toUpperCase();
+    ul = list;
+    li = ul.getElementsByTagName('li');
+
+    // Loop through all list items, and hide those who don't match the search query
+    for (i = 0; i < li.length; i++) {
+        span = li[i].getElementsByTagName("span")[0];
+        txtValue = span.textContent.toUpperCase();
+
+        if (txtValue.includes(filter)) {
+            span.style.display = "flex";
+        } else {
+            trash = li[i].getElementsByTagName("span")[1];
+            span.style.display = "none";
+            trash.style.display = "none";
+        }
+
+    }
+}
